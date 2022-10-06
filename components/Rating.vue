@@ -1,14 +1,4 @@
-<script setup>
-import { defineProps } from "vue";
-const props = defineProps({
-  rating: Number,
-});
-</script>
-
 <template>
-  <!-- ${value < 50 && "text-yellow-300"}
-					${value >= 50 && value <= 85 && "text-purple-500"}
-					${value > 85 && "text-green-400/60"} -->
   <div class="relative w-12">
     <svg class="-rotate-90" viewBox="0 0 120 120" stroke-width="6">
       <circle
@@ -54,3 +44,16 @@ const props = defineProps({
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "rating",
+
+  props: {
+    rating: {
+      type: Number,
+      default: "",
+    },
+  },
+};
+</script>

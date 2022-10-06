@@ -1,10 +1,3 @@
-<script setup>
-import { defineProps } from "vue";
-const props = defineProps({
-  movie: Object,
-});
-</script>
-
 <template>
   <div class="bg-gray-800 rounded overflow-hidden shadow-lg flex p-3">
     <img
@@ -55,7 +48,13 @@ export default {
 
   components: {
     Rating,
-    Loader,
+  },
+
+  props: {
+    movie: {
+      type: Object,
+      default: "",
+    },
   },
 };
 </script>
