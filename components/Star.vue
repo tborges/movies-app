@@ -1,10 +1,10 @@
 <template>
-  <ul>
-    <li class="star hover:animate-ping"></li>
-    <li class="star hover:animate-ping"></li>
-    <li class="star hover:animate-ping"></li>
-    <li class="star hover:animate-ping"></li>
-    <li class="star hover:animate-ping"></li>
+  <ul class="hover:animate-pulse">
+    <li class="star"></li>
+    <li class="star"></li>
+    <li class="star"></li>
+    <li class="star"></li>
+    <li class="star"></li>
   </ul>
 </template>
 
