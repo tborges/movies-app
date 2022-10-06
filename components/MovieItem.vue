@@ -13,6 +13,7 @@
         <div class="flex flex-col">
           <h3 class="font-bold text-lg">{{ movie.Title }}</h3>
           <span class="-mt-0.5 opacity-80">{{ movie.Year }}</span>
+          <Star />
         </div>
       </div>
 
@@ -42,12 +43,14 @@
 
 <script>
 import Rating from "@/components/Rating";
+import Star from "@/components/Star";
 
 export default {
   name: "movieItem",
 
   components: {
     Rating,
+    Star,
   },
 
   props: {
