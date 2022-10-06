@@ -1,8 +1,6 @@
 <script setup>
 import { ref, watchEffect } from "vue";
 import { fetchMovies } from "@/providers/api";
-import MovieItem from "@/components/MovieItem";
-import Loader from "@/components/Loader";
 
 let loading = ref(false);
 let type = ref("");
@@ -86,3 +84,17 @@ watchEffect(async () => {
     </div>
   </div>
 </template>
+
+<script>
+import MovieItem from "@/components/MovieItem";
+import Loader from "@/components/Loader";
+
+export default {
+  name: "home",
+
+  components: {
+    MovieItem,
+    Loader,
+  },
+};
+</script>

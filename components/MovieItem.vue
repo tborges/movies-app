@@ -1,5 +1,4 @@
 <script setup>
-import Rating from "@/components/Rating";
 import { defineProps } from "vue";
 const props = defineProps({
   movie: Object,
@@ -47,3 +46,16 @@ const props = defineProps({
     </div>
   </div>
 </template>
+
+<script>
+import Rating from "@/components/Rating";
+
+export default {
+  name: "movieItem",
+
+  components: {
+    Rating,
+    Loader,
+  },
+};
+</script>
