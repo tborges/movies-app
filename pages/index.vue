@@ -36,7 +36,7 @@ watchEffect(async () => {
       <h1 class="font-serif text-xl font-bold">Movie Discovery</h1>
 
       <div class="h-full flex items-center gap-3">
-        Filter by type:
+        Filter
 
         <div class="relative">
           <select
