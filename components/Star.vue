@@ -44,7 +44,7 @@ const ratingArray = Array(!!props.outOf ? props.outOf : 5)
       <svg
         v-for="(path, index) in ratingArray"
         :key="index"
-        class="w-6 h-6"
+        class="w-4 h-4"
         :stroke="color"
         viewBox="0 0 24 24"
       >

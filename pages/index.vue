@@ -96,5 +96,26 @@ export default {
     MovieItem,
     Loader,
   },
+
+  head() {
+    return {
+      htmlAttrs: {
+        lang: "en",
+      },
+      title: "Movies-App - Troy Borges",
+      meta: [
+        { charset: "utf-8" },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1",
+        },
+        {
+          hid: "description",
+          name: "description",
+          content: "Movies-App - description",
+        },
+      ],
+    };
+  },
 };
 </script>
