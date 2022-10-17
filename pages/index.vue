@@ -2,9 +2,9 @@
 import { ref, watchEffect } from "vue";
 import { fetchMovies } from "@/providers/api";
 
-let loading = ref(false);
-let type = ref("");
-let movies = ref([]);
+let loading = ref(false); //default is false
+let type = ref(""); //Series, Movies or "" (all)
+let movies = ref([]); //List of Movies
 
 watchEffect(async () => {
   loading.value = true;
@@ -33,7 +33,7 @@ watchEffect(async () => {
         justify-between
       "
     >
-      <h1 class="font-serif text-xl font-bold">Movie Discovery</h1>
+      <h1 class="font-serif text-xl md:text-2xl font-bold">Movie Discovery</h1>
 
       <div class="h-full flex items-center gap-3">
         Filter

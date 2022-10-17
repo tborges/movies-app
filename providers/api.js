@@ -1,9 +1,12 @@
 import axios from "axios";
 
 export const fetchMovies = async (type = "") => {
+	//	If you don't set type, the type parameter doesn't get added to the URL, 
+	// so when you select all in the dropdown, it sets the type to an empty string 
+	// and then this function gets called with the empty string it doesn't send the 
+	// type parameter to the API.
 	const res = await axios.get(
-		`https://www.omdbapi.com/?s=bat&apikey=6c26eea${
-			type?.length ? "&type=" + type : ""
+		`https://www.omdbapi.com/?s=bat&apikey=6c26eea${type?.length ? "&type=" + type : ""
 		}`
 	);
 
