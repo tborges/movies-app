@@ -1,6 +1,8 @@
 <script setup>
 import { ref, watchEffect } from "vue";
 import { fetchMovies } from "@/providers/api";
+import MovieItem from "@/components/MovieItem";
+import Loader from "@/components/Loader";
 
 let loading = ref(false); //default is false
 let type = ref(""); //Series, Movies or "" (all)
@@ -84,38 +86,3 @@ watchEffect(async () => {
     </div>
   </div>
 </template>
-
-<script>
-import MovieItem from "@/components/MovieItem";
-import Loader from "@/components/Loader";
-
-export default {
-  name: "home",
-
-  components: {
-    MovieItem,
-    Loader,
-  },
-
-  head() {
-    return {
-      htmlAttrs: {
-        lang: "en",
-      },
-      title: "Movies-App - Troy Borges",
-      meta: [
-        { charset: "utf-8" },
-        {
-          name: "viewport",
-          content: "width=device-width, initial-scale=1",
-        },
-        {
-          hid: "description",
-          name: "description",
-          content: "Movies-App - description",
-        },
-      ],
-    };
-  },
-};
-</script>
